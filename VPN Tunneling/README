@@ -1,0 +1,19 @@
+This is the README file for the tun_server.c and tun_client.c code.
+
+To perform the Task we have to run the tun_server.c file in the server machine(192.168.15.6)
+The following command is used to compile this file.
+gcc -o tun_server tun_server.c -lcrypto -lssl
+
+Run using:
+sudo ./tun_server {PORT_NUMBER}
+example:
+sudo ./tun_server 30010
+
+We have to run the tun_client.c file in the server machine(192.168.15.7)
+The following command is used to compile this file.
+gcc -o tun_client tun_client.c -lcrypto -lssl
+
+Run using:
+sudo ./tun_client {SERVER_IP} {SERVER_PORT_NUMBER}
+example:
+sudo ./tun_client 192.168.15.6 30010
