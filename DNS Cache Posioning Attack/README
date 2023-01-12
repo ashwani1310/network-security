@@ -1,0 +1,17 @@
+This is the README file for the udp.c code used for DNS Cache Poisoning Attack.
+
+
+To perform the Task we have to run the udp.c file in the dns_attacker machine.
+The following command is used to compile this file.
+gcc udp.c -o udp -lpcap
+
+This compiled udp file is run using the following command:
+sudo ./udp 192.168.15.8 192.168.15.6
+
+The first argument to the above command is the Attacker's machine IP and the second argument in the Apollo server's IP.
+
+The following commands are run in Apollo to flush the DNS and then see if the DNS cache is poisoned or not while this code runs.
+
+sudo rndc flush
+sudo rndc dumpdb -cache
+cat /var/cache/bind/dump.db | grep attacker
