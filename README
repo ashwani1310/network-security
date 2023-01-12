@@ -1,6 +1,4 @@
-This is the README file for the udp.c code submitted as part of CS528 Assignment 3.
-
-All the configurations in the Apollo, dns_attacker, and dns_user are made as written in the Assignment's instructions.
+This is the README file for the udp.c code used for DNS Cache Poisoning Attack.
 
 To perform the Task we have to run the udp.c file in the dns_attacker machine.
 The following command is used to compile this file.
